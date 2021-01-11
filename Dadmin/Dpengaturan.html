@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../asset/css/admin.css"> 
+    <link rel="stylesheet" type="text/css" href="../asset/fonts/Font-Awesome-master/css/all.min.css">
+    <link rel="icon" type="image/png" href="../asset/images/harbas1.ico" />
+    <title>Dashboard Guru</title>
+    <script>
+      function validasi() {
+      var nisn = document.getElementById("nip").value;
+      var nama = document.getElementById("nama").value;
+      var kelas = document.getElementById("mapel").value;
+      var jeniskelamin = document.getElementById("jeniskelamin").value;
+      var ttl = document.getElementById("ttl").value;
+
+      if (nisn != "" && nama!="" && kelas !="" && jeniskelamin !="" && ttl !="") {
+        alert ('Data Berhasil disimpan');
+      }else{
+        alert('Anda harus mengisi data dengan lengkap !');
+      }
+    }
+    </script>
+  </head>
+  <body>
+   <!-- membuat header navigasi pada dashboard-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+        <a class="navbar-brand" href="#">Selamat Datang Guru</a>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!--untuk pemisah navigasi-->
+          <div class="mr-auto"></div>
+    
+          <ul class="navbar-nav">
+            <!--untuk menampilkan title pada icon ketika diarahkan ke icon tersebut-->
+              <li class="nav-item dropdown">
+                  <a class="btn btn-default" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bell mr-3"  data-toogle="tooltip"  title="Notifikasi "><span class="badge">1</span></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="nav-link" href="#">Anda saat ini mengajar<span class="sr-only">(current)</span></a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-default" href="Dpengaturan.html" aria-label="Settings">
+                  <i class="fas fa-user mr-3" data-toogle="tooltip"  title="Pengaturan " aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-default" href="../LGuru.html" aria-label="Settings">
+                  <i class="fas fa-sign-out-alt  mr-3" data-toogle="tooltip"  title="Keluar "></i>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row no-gutters mt-5" >
+        <!-- untuk sidebar-->       
+        <div class="col-md-2 bg-dark mt-2 pr-3 pt-4" style="height: 665px;">
+            <!--set margin, dan paddinng pada sidebar nya-->  
+            <ul class="nav flex-column ml-3 mb-5">
+            
+              <li class="nav-item " >
+                <!--merubah tulisan supaya tidak auto disetiap a href nya -->
+                <!--menambahkan garis bisa make hr atau border bottom-->
+                <!--menambahkan hover-->
+              <a class="nav-link active text-white" href="Dadmin.html">
+                <i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a><hr class="bg-secondary">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="Dkelas.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-chalkboard-teacher mr-2"></i>
+                Kelas Siswa
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-white" href="DaftarKelas.html"><i class="fas fa-book mr-2"></i>Daftar Kelas</a>
+                <a class="dropdown-item text-white" href="Kelas.html"><i class="fas fa-book mr-2"></i>Tabel Kelas</a>
+              </div>
+              <hr class="bg-secondary">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Dguru.html"> <i class="fas fa-chalkboard-teacher mr-2"></i>Daftar Guru</a><hr class="bg-secondary">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Djadwal.html"> <i class="fas fa-calendar-alt mr-2"></i> Jadwal Belajar</a><hr class="bg-secondary">
+              </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Dsiswa.html"><i class="fas fa-paper-plane mr-2"></i> Data Siswa</a><hr class="bg-secondary">
+              </li>
+
+            </ul>
+        </div>
+        <!--untuk kontent-->
+        
+            <div class="col-md-10 p-5 pt-2">
+                <h3> 
+                  <i class="fas fa-calendar-alt mr-2"> Pengaturan Akun</i><hr>
+              
+                </h3>
+                <form action="#" method="POST" onSubmit="validasi()">
+                  <div class="form-group">
+                    <label>NIP :</label>
+                    <input type="text" name="nip" id="nip" class="form-control"/>
+                  </div>
+                  <div class="form-group">
+                    <label>Nama Lengkap:</label>
+                    <input type="text" name="nama" id="nama" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label>Mata Pelajaran :</label>
+                    <input type="text" name="mapel" id="mapel" class="form-control"/>
+                  </div>
+                  <div class="form-group">
+                    <label>Jenis Kelamin :</label>
+                    <input type="text" name="jeniskelamin" id="jeniskelamin" class="form-control"/>
+                  </div>
+                  <div class="form-group">
+                    <label>Tempat / Tanggal Lahir :</label>
+                    <input type="text" name="ttl" id="ttl" class="form-control"/>
+                  </div class="form-group">
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </form>
+                  <!-- cari code untuk menampilkan data ke table dari database pada html secara automatis-->
+                  <!-- ini example-->
+            
+
+            </div>   
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/admin.js"></script>
+</body>
+</html>

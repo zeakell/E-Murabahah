@@ -1,0 +1,46 @@
+/*menambahkan hover*/
+
+.nav-link:hover, .dropdown-item:hover{
+    background-color: grey;
+
+}
+.display-4 {
+    font-weight: bold;
+}
+/*membuat background*/
+.card-body-icon
+{
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 90px;
+}
+
+.btn .badge {
+    position: absolute;
+    top: 15px;
+    padding: 1px 5px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+  }
+
+h5.card-title {
+    color: black;
+}
+p.card-text {
+    color: black;
+    font-size: 10pt;
+}
+
+.bg-info {
+    background-color: black;
+}
+.card-img-top {
+    padding: 20px;
+    width: 356px;
+    height: 356px;
+    
+}

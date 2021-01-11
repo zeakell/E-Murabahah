@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../asset/css/admin.css"> 
+    <link rel="stylesheet" type="text/css" href="../asset/fonts/Font-Awesome-master/css/all.min.css">
+    <link rel="icon" type="image/png" href="../asset/images/harbas1.ico" />
+    <link rel="stylesheet" type="text/css" href="../asset/css/form.css">
+    <title>Dashboard Admin | Nilai Siswa</title>
+  </head>
+  <body>
+   <!-- membuat header navigasi pada dashboard-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+        <a class="navbar-brand" href="#">SELAMAT DATANG OPERATOR</a>
+        <div class="icon my-2 my-lg-0 ml-auto" >
+          <h5>
+              <!--untuk menampilkan title pada icon ketika diarahkan ke icon tersebut-->
+
+             
+              <a class="btn btn-default" aria-label="Settings">
+                <i class="fas fa-bell mr-3"  data-toogle="tooltip"  title="Notifikasi "></i>
+              </a>
+              <a class="btn btn-default" href="Dpengaturan.html" aria-label="Settings">
+                <i class="fas fa-user mr-3" data-toogle="tooltip"  title="Pengaturan " aria-hidden="true"></i>
+              </a>
+              <a class="btn btn-default" href="../Ladmin.html" aria-label="Settings">
+                <i class="fas fa-sign-out-alt  mr-3" data-toogle="tooltip"  title="Keluar "></i>
+              </a>
+          </h5>
+        </div>
+      </nav>
+
+      <div class="row no-gutters mt-5" >
+        <!-- untuk sidebar-->       
+        <div class="col-md-2 bg-dark mt-2 pr-3 pt-4" style="height: 665px;">
+            <!--set margin, dan paddinng pada sidebar nya-->  
+            <ul class="nav flex-column ml-3 mb-5">
+                 
+              <li class="nav-item " >
+                <!--merubah tulisan supaya tidak auto disetiap a href nya -->
+                <!--menambahkan garis bisa make hr atau border bottom-->
+                <!--menambahkan hover-->
+              <a class="nav-link active text-white" href="Dadmin.html">
+                <i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a><hr class="bg-secondary">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="Dkelas.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-chalkboard-teacher mr-2"></i>
+                Kelas Siswa
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-white" href="DaftarKelas.html"><i class="fas fa-book mr-2"></i>Daftar Kelas</a>
+                <a class="dropdown-item text-white" href="Kelas.html"><i class="fas fa-book mr-2"></i>Tabel Kelas</a>
+              </div>
+              <hr class="bg-secondary">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Dguru.html"> <i class="fas fa-chalkboard-teacher mr-2"></i>Daftar Guru</a><hr class="bg-secondary">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Djadwal.html"> <i class="fas fa-calendar-alt mr-2"></i> Jadwal Belajar</a><hr class="bg-secondary">
+              </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Dsiswa.html"><i class="fas fa-paper-plane mr-2"></i> Data Siswa</a><hr class="bg-secondary">
+              </li>
+              
+              </ul>
+        </div>
+        <!--untuk kontent-->
+            <div class="col-md-10 p-5 pt-2">
+                <h3> 
+                  <i class="fas fa-graduate-alt mr-2 "> DATA SISWA KELAS</i>
+                </h3>
+                
+                <div>
+                  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Tambah Data</button>
+                  <div id="id01" class="modal">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                  <form class="modal-content" action="Dsiswa.html" method="POST">
+                    <div class="container">
+                      <h1>Tambah Data Siswa</h1>
+                      
+                      <hr>
+                      <label for="id"><b>NIS Siswa</b></label>
+                      <input type="text" placeholder="Masukkan NIS anda" name="nis" required>
+                      
+                      <label for="nama"><b>Nama Siswa</b></label>
+                      <input type="text" placeholder="Masukkan nama anda" name="nama" required>
+
+                      <label for="mapel"><b>Jenis Kelamin</b></label>
+                      <input type="text" placeholder="Masukkan Jenis Kelamin" name="jk" required>
+
+                      <label for="us"><b>TTL</b></label>
+                      <input type="text" placeholder="Masukkan TTL" name="ttl" required>
+
+                      <label for="psw"><b>Alamat</b></label>
+                      <input type="password" placeholder="Masukkan alamat" name="alm" required>
+
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Masukkan password" name="psw" required>
+                      
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                      </label>
+
+                      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                      <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn" name="submit">Tambahkan</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+                </div>
+
+                <form action="#" method="POST">                   
+                    <div>
+                      <input type='hidden' name='id_kelas' value='".$id_kelas."' readonly='readonly' />
+                    </div>
+                    <div>
+                        <label> NIS Siswa : </label>
+                        <input style="width: 200px" title="Masukan NIS Siswa" type="text" name="id_murid" value="" />&nbsp;
+                        <input class="btn btn-primary mb-3" type="submit" value="Cari" name="submit" />
+                    </div>               
+                </form>
+                
+                
+                <table class="table table-striped"> 
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">NIS</th> 
+                      <th scope="col">Nama</th>
+                      <th scope="col">P/L</th>
+                      <th scope="col">TTL</th>
+                      <th scope="col">Alamat</th>
+                      <th scope="col">Password</th>
+                      <th colspan ="3" scope="col">Pengaturan</th>
+                    </tr>
+                  </thead>
+                  <!-- cari code untuk menampilkan data ke table dari database pada html secara automatis-->
+                  <!-- ini example-->
+                  <tbody>
+                    <tr> 
+                      <td>1.</td> 
+                      <td>112233	</td>     
+                      <td>Rudi Andika</td> 
+                      <td>Laki-laki</td>
+                      <td>Jakarta,7 Januari 2001</td>
+                      <td>Perum. Royal Recidence Blok A1 No.11</td>
+                      <td>1234</td>
+                      <td> <a href="" class="btn btn-primary">Details</a></td>
+                      <td> <i class="fas fa-trash-alt" id="delete" data-toogle="tooltip" title="delete" onclick="SomeDeleteRowFunction(this);"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+          // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+          modal.style.display = "none";
+          }
+        }
+
+          function SomeDeleteRowFunction(del) {
+          if (typeof(del) == "object") {
+            $(del).closest("tr").remove();
+          } else {
+            return false;
+          }
+        }
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/admin.js"></script>
+</body>
+</html>
+
+
